@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода - Система управления</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Секция погоды -->
+        <div id="weatherSection" class="weather-section">
+            <div class="weather-container">
+                <div class="weather-header">
+                    <h1>Погода по городу</h1>
+                    <div class="weather-actions">
+                        <button id="backBtn" class="back-btn">Назад</button>
+                    </div>
+                </div>
+
+                <div class="weather-content">
+                    <div class="city-form">
+                        <div class="form-group">
+                            <label for="cityInput">Введите название города:</label>
+                            <input type="text" id="cityInput" name="city" placeholder="Например: Moscow" required>
+                        </div>
+                        <button type="button" id="getWeatherBtn" class="weather-btn">Получить погоду</button>
+                    </div>
+
+                    <div class="weather-info" id="weatherInfo" style="display: none;">
+                        <div class="city-details">
+                            <h2 id="cityName"></h2>
+                            <p>Широта: <span id="latitude"></span>, Долгота: <span id="longitude"></span></p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="weatherChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>

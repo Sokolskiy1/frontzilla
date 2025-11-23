@@ -270,6 +270,14 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadBtn.addEventListener('click', openUploadModal);
     }
 
+    // Обработчик кнопки погоды
+    const weatherBtn = document.getElementById('weatherBtn');
+    if (weatherBtn) {
+        weatherBtn.addEventListener('click', () => {
+            window.location.href = 'weather.html';
+        });
+    }
+
     // Обработчики для модального окна
     const modal = document.getElementById('uploadModal');
     const closeBtn = document.querySelector('.close-modal');
