@@ -1,0 +1,21 @@
+{
+  "name": "front-dockzilla",
+  "version": "1.0.0",
+  "description": "Frontend project with login page",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "live-server src --port=3000 --open=/",
+    "build": "mkdir dist && cp -r src/* dist/",
+    "start": "live-server src --port=3000 --open=/"
+  },
+  "keywords": [
+    "frontend",
+    "login",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

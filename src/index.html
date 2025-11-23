@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Секция входа -->
+        <div id="loginSection" class="auth-section">
+            <div class="login-container">
+                <div class="login-form">
+                    <h1>Вход в систему</h1>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Имя пользователя:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                        <button type="button" id="testBtn" style="margin-top: 10px; padding: 8px 15px; background: #17a2b8; color: white; border: none; border-radius: 3px; cursor: pointer;">Тест консоли</button>
+                    </form>
+                    <p class="auth-link">Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция регистрации -->
+        <div id="registerSection" class="auth-section" style="display: none;">
+            <div class="login-container">
+                <div class="login-form">
+                    <h1>Регистрация</h1>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="regUsername">Имя пользователя:</label>
+                            <input type="text" id="regUsername" name="regUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Пароль:</label>
+                            <input type="password" id="regPassword" name="regPassword" required>
+                        </div>
+                        <button type="submit" class="register-btn">Зарегистрироваться</button>
+                    </form>
+                    <p class="auth-link">Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция дашборда -->
+        <div id="dashboardSection" class="auth-section" style="display: none;">
+            <div class="dashboard-container">
+                <div class="dashboard">
+                    <h1>Добро пожаловать!</h1>
+                    <p>Вы успешно вошли в систему.</p>
+                    <button id="logoutBtn" class="logout-btn">Выйти</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

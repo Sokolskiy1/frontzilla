@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файлы - Система управления</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Секция файлов -->
+        <div id="filesSection" class="files-section">
+            <div class="files-container">
+                <div class="files-header">
+                    <h1>Мои файлы</h1>
+                    <div class="files-actions">
+                        <button id="uploadBtn" class="upload-btn">Загрузить файл</button>
+                        <button id="logoutBtn" class="logout-btn">Выйти</button>
+                    </div>
+                </div>
+
+                <div class="files-content">
+                    <div class="file-list" id="fileList">
+                        <div class="file-item empty-state">
+                            <p>Файлы не найдены. Загрузите первый файл!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+        <div id="fileLink" class="file-link" style="display: none;"></div>
+    </div>
+
+    <!-- Модальное окно для загрузки файла -->
+    <div id="uploadModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Загрузить файл</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="fileInput">Выберите файл:</label>
+                        <input type="file" id="fileInput" name="file" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="upload-submit-btn">Загрузить</button>
+                        <button type="button" class="cancel-btn">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="files.js"></script>
+</body>
+</html>
