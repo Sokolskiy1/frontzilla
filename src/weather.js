@@ -154,3 +154,4 @@ cityInput.addEventListener('keypress', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     cityInput.focus();
 });
+
