@@ -11,3 +11,5 @@ yarn-error.log*
 # Logs
 logs/
 *.log
+
+text
